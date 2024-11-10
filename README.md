@@ -1,35 +1,32 @@
-# manage-system-vue
+# 專案簡介
+本專案為一基礎客戶管理系統之前端應用，使用 Vue3 、 ElementPlus 組件庫搭建，實現便於操作的使用者介面，目前提供一間小型健身工作室使用；點擊以下連結可以進入試用版，歡迎測試並請不吝指導~
 
-This template should help get you started developing with Vue 3 in Vite.
+🔗 **試用版連結** : <a href="https://seanhuang110633.github.io/ManageSystem_Frontend_Demo/" target="_blank" rel="noopener noreferrer"> Click here 👍</a>
 
-## Recommended IDE Setup
++ **測試帳號**
+  + 用戶名：ABC
+  + 密碼: 1qaz2wsx
++ **註冊新用戶**
+  + 用戶名：長度必須介在 3~20 個字
+  + 密碼：長度 8 個字以上，包含數字及英文
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+# 功能介紹
++ **客戶及用戶資訊增刪改查**:
+  +  新增、修改客戶 : 依該健身工作室實際需求設計相關欄位。
+  +  刪除客戶 : 邏輯刪除，於資料庫表中將該筆資訊標記為已刪除，非真正刪除。
+  +  查詢客戶 : 可透由用戶姓名及電話號碼查詢，支持模糊查詢。
+  +  用戶方面有基本的註冊、登入、修改個資、修改密碼等功能。
++ **客戶態樣分析** 
+  + 統計客戶男女比例。
+  + 區分不同年度，統計每月新增客戶數量。
+  + 統計不同客戶來源管道，分為社群網路、親友介紹及其他等三項。
+# 使用技術
++ **Vue** : 以 Vue 3 框架進行開發，利用其高效的響應式系統和 Composition API 實現系統操作界面。
++ **VueRouter** : 管理應用的前端路由，並支持頁面之間的切換與導航。
++ **Pinia** : 用於狀態管理，本系統中用於管理登入用戶之帳戶資訊及JWT Token。
++ **ElementPlus** : 與 Vue 3 適配性高，故使用其作為 UI 組件庫實現用戶操作介面。
++ **Axios** : 處理前後端的 API 請求；另使用 Axios 請求及響應攔截器，在每個請求中添加 JWT Token並統一進行錯誤處理。
++ **Chart.js** : 實現客戶態樣分析統計的圖視覺化呈現。
+# 擴展規劃
++ **完善RWD功能** : 因本系統目前僅於固定桌機使用，故未處理RWD問題，惟為因應未來可能需求，將完善相關功能。
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-pnpm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-pnpm dev
-```
-
-### Compile and Minify for Production
-
-```sh
-pnpm build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-pnpm lint
-```
