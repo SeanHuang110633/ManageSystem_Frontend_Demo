@@ -24,8 +24,8 @@ const coachList = ref([])
 //----------------- 分頁及頁面呈現相關 -------------------
 //1.分頁元件數據模型
 const pageNum = ref(1) //當前頁碼
-const total = ref(50) //當頁總條數
-const pageSize = ref(50) //每頁條數
+const total = ref(10) //當頁總條數
+const pageSize = ref(10) //每頁條數
 
 //2.當頁面總資料數改變時，更新頁面大小
 const onSizeChange = async (size) => {
