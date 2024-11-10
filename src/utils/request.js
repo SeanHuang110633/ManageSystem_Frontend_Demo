@@ -3,8 +3,7 @@ import { useTokenStore } from '@/stores'
 import { ElMessage } from 'element-plus'
 import router from '@/router'
 
-// const baseURL = '/api'
-const baseURL = 'https://15.168.7.247.nip.io/'
+const baseURL = import.meta.env.VITE_BASE_API_URL
 
 const instance = axios.create({
   //設定1.baseURL 2.超時時間
@@ -12,7 +11,7 @@ const instance = axios.create({
   timeout: 10000
 })
 
-// 設置請求攔截器
+// 請求攔截器
 instance.interceptors.request.use(
   (config) => {
     const tokenStore = useTokenStore()
@@ -28,7 +27,7 @@ instance.interceptors.request.use(
   }
 )
 
-// 設置響應攔截器
+// 響應攔截器
 instance.interceptors.response.use(
   (result) => {
     //判斷返回狀態碼

@@ -8,7 +8,7 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/ManageSystem_Frontend_Demo/', // 將 'my-vue-app' 替換為您的 repository 名稱
+  base: '/ManageSystem_Frontend_Demo/',
   plugins: [
     vue(),
     AutoImport({
