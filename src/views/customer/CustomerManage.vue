@@ -382,17 +382,6 @@ const isEmpty = (str) => {
 
     <!-- 篩選表單 -->
     <el-form inline>
-      <el-form-item label="所屬教練: " style="color: aquamarine">
-        <el-select class="coach-selector" placeholder="請選擇" v-model="coachId">
-          <el-option
-            v-for="c in coachList"
-            :key="c.id"
-            :label="c.username"
-            :value="c.id"
-          ></el-option>
-        </el-select>
-      </el-form-item>
-
       <el-form-item label="姓名搜尋: ">
         <el-input
           v-model="customerName"
@@ -474,7 +463,6 @@ const isEmpty = (str) => {
         sortable
       ></el-table-column>
       <el-table-column label="剩餘堂數" min-width="100" prop="remainingLessons"></el-table-column>
-      <el-table-column label="所屬教練" prop="coachName"></el-table-column>
 
       <template #empty>
         <el-empty description="暫無數據" />
