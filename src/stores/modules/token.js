@@ -33,9 +33,6 @@ export const useTokenStore = defineStore(
       if (!token.value) {
         return false
       } else if (new Date().getTime() - tokenSetTime.value > 12 * 60 * 60 * 1000) {
-        console.log('current time:' + new Date().getTime())
-        console.log('set time:' + tokenSetTime.value)
-        console.log('gap: ' + new Date().getTime() - tokenSetTime.value)
         return false
       }
       return true

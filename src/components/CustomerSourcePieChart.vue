@@ -18,7 +18,6 @@ const customerList = async () => {
   try {
     const result = await customerListApproachService()
     if (result.data) {
-      console.log('圖表數據: ', result.data)
       approachesCountList.value = result.data
     } else {
       console.error('No customer data found')

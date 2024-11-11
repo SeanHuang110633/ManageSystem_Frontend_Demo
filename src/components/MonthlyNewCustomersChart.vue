@@ -53,8 +53,6 @@ const fetchCustomerData = async () => {
     const response = await customerListFirstLessosnService()
     const data = response.data
 
-    console.log('API 返回的數據:', data)
-
     if (data && typeof data === 'object') {
       customerData.value = data
       years.value = Object.keys(data).sort((a, b) => b - a)

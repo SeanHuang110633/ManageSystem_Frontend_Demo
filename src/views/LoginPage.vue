@@ -74,7 +74,6 @@ const login = async () => {
   await form.value.validate()
   let result = await userLoginService(loginData.value)
   ElMessage.success(result.message ? result.message : '登入成功!')
-  console.log('Layout page: ' + result.data)
   tokenStore.setToken(result.data)
   //跳轉到主頁
   router.push('/')

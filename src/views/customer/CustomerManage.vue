@@ -257,8 +257,6 @@ const showOtherInput = () => {
 }
 //客戶資料回顯
 const showEditDialog = (row) => {
-  console.log('=============== 查看資料回顯 ================')
-  console.log(row)
   title.value = '編輯/刪除客戶 '
   //回顯數據
   customerModel.value.customerName = row.customerName
@@ -334,7 +332,6 @@ const updateCustomer = async () => {
 
 //3.刪除客戶
 const deleteCustomer1 = async (id) => {
-  console.log(id)
   //確認用戶是否要刪除
   ElMessageBox.confirm('真的要刪除這個客戶嗎', 'Double Check', {
     confirmButtonText: '確認',
