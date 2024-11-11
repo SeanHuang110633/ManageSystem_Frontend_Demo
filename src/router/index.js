@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 
 //導入組件
 import LoginPage from '@/views/LoginPage.vue'
@@ -27,7 +27,7 @@ const routes = [
 
 //創建路由器
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes: routes
 })
 
